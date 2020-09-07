@@ -1,12 +1,16 @@
 var modal = document.getElementById("myModal");
-var img = document.getElementById("myImg")
-var modalImg = document.getElementById("images/R1-06262-013A.jpg")
+var images = document.getElementsByClassName("myImages")
+var modalImg = document.getElementById("img01")
 var captionText = document.getElementById("caption")
 
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+for (var i = 0; i < images.length; i++) {
+    var img = images[i]
+
+    img.onclick = function (evt) {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
 }
 
 var span = document.getElementsByClassName("close")[0];

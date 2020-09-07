@@ -54,6 +54,7 @@ h1 {
 
 #myImg {
     transition: 0.3s;
+    cursor: pointer;
     /* border: 5px; */
 }
 
